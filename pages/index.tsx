@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect } from 'react'
 import styles from '../styles/Home.module.css'
 
@@ -37,39 +38,46 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <a href="#youtube" className={styles.card}>
-            <h2>Youtube Channel &rarr;</h2>
-            <p>Free videos to help you get back into Life.</p>
-          </a>
+          <Link href="#youtube">
+            <a href="#youtube" className={styles.card}>
+              <h2>Youtube Channel &rarr;</h2>
+              <p>Free videos to help you get back into Life.</p>
+            </a>
+          </Link>
 
-          <a className={styles.card}>
-            <h2>Courses &rarr;</h2>
-            <p>Intermediate Self Improvement knowledge provided to you.</p>
-          </a>
+          <Link href="#courses">
+            <a className={styles.card}>
+              <h2>Courses &rarr;</h2>
+              <p>Intermediate Self Improvement knowledge provided to you.</p>
+            </a>
+          </Link>
 
-          <a
-            href="#coaching"
-            className={styles.card}
-          >
-            <h2>Coaching &rarr;</h2>
-            <p>1 to 1 coaching with me to speak about your SI journey</p>
-          </a>
+          <Link href="#coaching">
+            <a
+              className={styles.card}
+            >
+              <h2>Coaching &rarr;</h2>
+              <p>1 to 1 coaching with me to speak about your SI journey</p>
+            </a>
+          </Link>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Products &rarr;</h2>
-            <p>
-              Helpful products helping and supporting you on your journey
-            </p>
-          </a>
+          <Link href="#products">
+            <a
+              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+              className={styles.card}
+            >
+              <h2>Products &rarr;</h2>
+              <p>
+                Helpful products helping and supporting you on your journey
+              </p>
+            </a>
+          </Link>
         </div>
 
         {/* SEPERATOR FOR YOUTUBE*/}
-        <div className={styles.seperator}></div>
+        <div className={styles.seperator} id="youtube"></div>
 
-        <div className={styles.youtube} id="youtube">
+        <div className={styles.youtube}>
           <iframe src="https://www.youtube.com/embed/4VaiFFYZYGY" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
           <iframe src="https://www.youtube.com/embed/xRh5R0MHfdE" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
           <iframe src="https://www.youtube.com/embed/L5CFg5-XW4w" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
