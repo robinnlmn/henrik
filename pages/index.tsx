@@ -30,7 +30,7 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="/">Henrik</a>
+          Welcome to <Link href="/"><a>Henrik</a></Link>
         </h1>
 
         <p className={styles.description}>
@@ -39,7 +39,7 @@ const Home: NextPage = () => {
 
         <div className={styles.grid}>
           <Link href="#youtube">
-            <a href="#youtube" className={styles.card}>
+            <a className={styles.card}>
               <h2>Youtube Channel &rarr;</h2>
               <p>Free videos to help you get back into Life.</p>
             </a>
@@ -63,7 +63,6 @@ const Home: NextPage = () => {
 
           <Link href="#products">
             <a
-              href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               className={styles.card}
             >
               <h2>Products &rarr;</h2>
@@ -96,21 +95,23 @@ const Home: NextPage = () => {
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://www.youtube.com/channel/UCfkIuCa8CmkPYzN4OiHe0iA"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My Youtube Channel{' '}
-        </a>
+        <Link href="https://www.youtube.com/channel/UCfkIuCa8CmkPYzN4OiHe0iA">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My Youtube Channel{' '}
+          </a>
+        </Link>
 
-        <a
-          href="https://www.instagram.com/henriklmn/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          My Instagram Profile{' '}
-        </a>
+        <Link href="https://www.instagram.com/henriklmn/">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My Instagram Profile{' '}
+          </a>
+        </Link>
       </footer>
     </div>
   )
